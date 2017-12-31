@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "npm install -g @angular/cli",
-    "postinstall": "ng build --prod --output-hashing=none"
+    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot"
+                    
   },
   "private": true,
   "dependencies": {
