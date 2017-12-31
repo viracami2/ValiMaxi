@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  
+  title = 'app Angular First!!';
+  aempezar ='a empezar en este mundo loco'
+
+  isDone = true;  
+  integer = 123;
+  hola:string ='hola';
+  datoString = ' :) '+this.hola +' esto es un string suck! ';
+  datoStringUno:string = 'jeje hola}';
+
+
+
+  saludarCordialmente() : string{
+
+
+    return 'Hola mundo cruel xd'
+  }
+
+
 }
