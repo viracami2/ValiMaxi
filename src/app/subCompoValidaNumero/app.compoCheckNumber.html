@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>-----------------SUB-COMPONENTE VALIDA NUMERO-----------</h2>  
+
+  
+      <input class="number-full" type="number" name="number"  [(ngModel)]="value" (blur)="onBlur()" > 
+      <p  class="red" *ngIf="!notError">
+        Dato tiene que ser de  {{minimo}} hasta {{maximo}}
+      </p>
+
+</div>
+
