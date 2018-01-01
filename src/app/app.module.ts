@@ -11,17 +11,19 @@ import {MatButtonModule, MatCheckboxModule,
 
 import { AppComponent } from './app.component';
 import { AppCompoBasic } from './compoBasic/app.compoBasic';
+import { AppCompoCheckNumber } from './subCompoValidaNumero/app.CompoCheckNumber';
 
-
+import { HttpModule }    from '@angular/http';//para hacer llamados a una api
 
 
 @NgModule({
   declarations: [
-    AppComponent,AppCompoBasic
+    AppComponent,AppCompoBasic,AppCompoCheckNumber
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,MatFormFieldModule,MatInputModule
+    MatButtonModule, MatCheckboxModule,MatFormFieldModule,MatInputModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent] 

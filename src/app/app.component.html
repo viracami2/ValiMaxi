@@ -20,6 +20,11 @@
 </ul>
 
 
+<button (click) ="eventoLocoUno('pulsadoxD')">  botonAPI </button>
+
+
+
+
 <mat-form-field>
     <textarea matInput placeholder="Autosize textarea" matTextareaAutosize matAutosizeMinRows="2"
               matAutosizeMaxRows="5"></textarea>
@@ -36,3 +41,11 @@
   <app-basic>cargando app...</app-basic>
 
 </div>
+
+
+
+<app-validandoNumero [minimo]="10" [maximo] ="60" [value]="11" (valueOut)="value=$event"  >  
+
+</app-validandoNumero>
+<h4>--------------------------------</h4>
+<p>valor del componenete es: {{value}}  suck! </p>
