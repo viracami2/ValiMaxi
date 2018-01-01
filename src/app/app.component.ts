@@ -21,7 +21,7 @@ export class AppComponent {
   
   title = 'app Angular First!!';
   aempezar ='a empezar en este mundo loco'
-
+  value ="";
   isDone = true;  
   integer = 123;
   hola:string ='hola';
