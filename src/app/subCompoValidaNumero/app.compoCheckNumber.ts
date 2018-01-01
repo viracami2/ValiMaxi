@@ -6,7 +6,7 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
   //styleUrls: ['./compoBasic/app.compoBasic.css']
 
 })
-export class AppCompoCheckNumber {
+export class AppcompoCheckNumber {
   
   
   @Input()  maximo: number ;
