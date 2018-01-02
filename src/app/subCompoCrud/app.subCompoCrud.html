@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>-----------------CRUD BASICO-----------</h2>  
+
+  <mat-form-field class="example-form-field">
+      <input matInput type="text" placeholder="hola soy una prueba " [(ngModel)]="value"/>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  <h3>--------------------------</h3>
+    <ul>
+  <li *ngFor="let item of items">
+
+        
+
+    <input readonly type="number" name="id" [(ngModel)]=item.id  >
+    <input readonly type="string" name="name" [(ngModel)]=item.name  >
+    <button (click)=removeItem(item) >Delete </button>
+    </li>
+
+  </ul>
+
+
+  
+     
+
+</div>
+
