@@ -11,8 +11,8 @@ import { Item } from './Item.model';
 })
 export class AppsubCompoCrud implements OnInit {
 
-  value = 'Digita Algo Valioso';
-  
+  value = ' Valioso con un cambio';
+    
   items: Array<Item> = new Array<Item>();
   
   ngOnInit(): void {
