@@ -5,11 +5,11 @@ import {Usuario } from './Usuario.model';
   
 @Component({
   selector: 'app-compoUsuario',
-  templateUrl: './app.subcompoUsuario.html',
+  templateUrl: './app.subCompoUsuario.html',
   //styleUrls: ['./compoBasic/app.compoBasic.css']
 
 })
-export class AppcompoUsuario implements OnInit {
+export class AppCompoUsuario implements OnInit {
 
   value = ' Valioso con un cambio';
     

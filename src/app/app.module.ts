@@ -24,7 +24,7 @@ import { AppComponent } from './app.component';
 import { AppCompoBasic } from './compoBasic/app.compoBasic';
 import { AppcompoCheckNumber } from './subCompoValidaNumero/app.compoCheckNumber';
 import { AppsubCompoCrud } from './subCompoCrud/app.subCompoCrud';
-import { AppcompoUsuario } from './subCompoUsuario/app.subCompoUsuario';
+import { AppCompoUsuario } from './subCompoUsuario/app.subCompoUsuario';
 
 
 import { HttpModule }    from '@angular/http';//para hacer llamados a una api
@@ -34,7 +34,7 @@ import { HttpModule }    from '@angular/http';//para hacer llamados a una api
 @NgModule({
   declarations: [
     AppComponent,AppCompoBasic,AppcompoCheckNumber,
-    AppsubCompoCrud,AppcompoUsuario
+    AppsubCompoCrud,AppCompoUsuario
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,
