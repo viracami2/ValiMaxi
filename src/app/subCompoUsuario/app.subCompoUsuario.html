@@ -36,11 +36,11 @@
       </mat-form-field>
 
       <mat-form-field>
-          <input  matInput type="string" name="firstLastName" [(ngModel)]=itemC.firstLastName  placeholder="Primer Apellido">
+          <input  matInput type="string" name="lastNameFirst" [(ngModel)]=itemC.lastNameFirst  placeholder="Primer Apellido">
       </mat-form-field>
 
       <mat-form-field>
-          <input  matInput type="string" name="secondLastName" [(ngModel)]=itemC.secondLastName  placeholder="Secondo Apellido">
+          <input  matInput type="string" name="lastNameSecond" [(ngModel)]=itemC.lastNameSecond  placeholder="Secondo Apellido">
       </mat-form-field>
 
       <mat-form-field>
@@ -108,17 +108,11 @@
   <li *ngFor="let item of items">
 
         
-
     <input readonly type="string" name="id" [(ngModel)]=item.idUser  >
     <input readonly type="string" name="name" [(ngModel)]=item.identityNumber  >
     <!-- <button (click)=removeItem(item) >Delete </button> -->
     </li>
-
   </ul>
-
-
-  
-     
 
 </div>
 
