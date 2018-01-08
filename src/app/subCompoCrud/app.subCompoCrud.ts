@@ -14,6 +14,7 @@ export class AppsubCompoCrud implements OnInit {
   value = ' Valioso con un cambio';
     
   items: Array<Item> = new Array<Item>();
+  itemC : Item = new Item(undefined,undefined);
   
   ngOnInit(): void {
   
@@ -22,7 +23,10 @@ export class AppsubCompoCrud implements OnInit {
     this.items.push(new Item(3,'raul castro'));
   }
 
-
+addItem(){
+this.items.push(this.itemC);
+this.itemC= new Item(undefined,undefined);
+}
 
   removeItem(it: Item){
     const index = this.items.indexOf(it);

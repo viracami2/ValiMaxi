@@ -9,21 +9,21 @@
       </button>
     </mat-form-field>
   <h3>--------------------------</h3>
-    <ul>
-  <li *ngFor="let item of items">
 
-        
+  <form action="">
 
-    <input readonly type="number" name="id" [(ngModel)]=item.id  >
-    <input readonly type="string" name="name" [(ngModel)]=item.name  >
-    <button (click)=removeItem(item) >Delete </button>
-    </li>
-
-  </ul>
-
-
-  
-     
-
+  <input  type="number" name="id" [(ngModel)]=itemC.id  placeholder="id">
+    <input  type="string" name="name" [(ngModel)]=itemC.name  placeholder="nombre" >
+  <button (click)=addItem() >Añadir </button>
+  </form>
+  <h3>--------------------------</h3>
+    
+    <ul>      
+      <li *ngFor="let item of items">       
+        <input readonly type="string" name="id" [(ngModel)]=item.id  >
+        <input readonly type="string" name="name" [(ngModel)]=item.name  >
+        <button (click)=removeItem(item) >Delete </button>
+      </li>
+    </ul>
 </div>
 

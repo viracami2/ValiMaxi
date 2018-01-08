@@ -10,17 +10,21 @@ import {
   MatChipsModule,  MatDatepickerModule,  MatDialogModule,  MatExpansionModule,
   MatGridListModule,  MatIconModule,  MatInputModule,  MatListModule,
   MatMenuModule,  MatNativeDateModule,  MatPaginatorModule,  MatProgressBarModule,
-  MatProgressSpinnerModule,  MatRadioModule,  MatRippleModule,  MatSelectModule,
+  MatProgressSpinnerModule,  MatRadioModule,  MatRippleModule, 
   MatSidenavModule,  MatSliderModule,  MatSlideToggleModule,  MatSnackBarModule,
   MatSortModule,  MatTableModule,  MatTabsModule,  MatToolbarModule,
-  MatTooltipModule,  MatStepperModule,
+  MatTooltipModule,  MatStepperModule 
 } from '@angular/material';
+
+import {MatSelectModule} from '@angular/material';
+
 
 
 import { AppComponent } from './app.component';
 import { AppCompoBasic } from './compoBasic/app.compoBasic';
 import { AppcompoCheckNumber } from './subCompoValidaNumero/app.compoCheckNumber';
 import { AppsubCompoCrud } from './subCompoCrud/app.subCompoCrud';
+import { AppcompoUsuario } from './subCompoUsuario/app.subCompoUsuario';
 
 
 import { HttpModule }    from '@angular/http';//para hacer llamados a una api
@@ -30,12 +34,12 @@ import { HttpModule }    from '@angular/http';//para hacer llamados a una api
 @NgModule({
   declarations: [
     AppComponent,AppCompoBasic,AppcompoCheckNumber,
-    AppsubCompoCrud
+    AppsubCompoCrud,AppcompoUsuario
   ],
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,MatFormFieldModule,MatInputModule,
-    HttpModule,MatIconModule
+    HttpModule,MatIconModule,MatSelectModule
 
   ],  
   exports: [
@@ -70,6 +74,7 @@ import { HttpModule }    from '@angular/http';//para hacer llamados a una api
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent] 
