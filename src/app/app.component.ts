@@ -19,7 +19,7 @@ export class AppComponent {
   }
   
   
-  title = 'app Angular First!!';
+  title = 'app VeriMaxi Version =>0.1!!';
   aempezar ='a empezar en este mundo loco'
   value ="";
   isDone = true;  

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';//para animaciones
+import {Routes,RouterModule} from "@angular/router";
+
+
 
 import {
   MatAutocompleteModule,  MatButtonModule,
@@ -15,6 +18,7 @@ import {
   MatSortModule,  MatTableModule,  MatTabsModule,  MatToolbarModule,
   MatTooltipModule,  MatStepperModule 
 } from '@angular/material';
+
 
 import {MatSelectModule} from '@angular/material';
 
@@ -31,6 +35,13 @@ import { HttpModule }    from '@angular/http';//para hacer llamados a una api
 
 
 
+const appRoutes:Routes =[
+  {path : 'compocheck',component: AppcompoCheckNumber},
+  {path : 'crearUsuario',component: AppCompoUsuario}  ,
+  {path : 'chekearNumero',component: AppcompoCheckNumber}  
+ ]
+
+
 @NgModule({
   declarations: [
     AppComponent,AppCompoBasic,AppcompoCheckNumber,
@@ -39,7 +50,8 @@ import { HttpModule }    from '@angular/http';//para hacer llamados a una api
   imports: [
     BrowserModule,FormsModule,BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,MatFormFieldModule,MatInputModule,
-    HttpModule,MatIconModule,MatSelectModule
+    HttpModule,MatIconModule,MatSelectModule,MatMenuModule,
+    RouterModule.forRoot(appRoutes),
 
   ],  
   exports: [
