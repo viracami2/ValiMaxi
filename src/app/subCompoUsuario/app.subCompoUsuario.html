@@ -1,14 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center ; color:rgb(136, 158, 39);">
-  <h2>-----------------Registrar Usuario(Paciente)-----------</h2>  
-  
+  <h2>-----------------Registrar Usuario(Paciente)-----------</h2>
+
 
 
   <div class="example-container">
-      <mat-form-field>        
+      <mat-form-field>
         <input matInput type="string" name="id" [(ngModel)]=itemC.idUser  placeholder="Id">
       </mat-form-field>
-    
+
       <mat-form-field>
           <input  matInput type="number" name="identityNumber" [(ngModel)]=itemC.identityNumber  placeholder="Nro Identidad">
       </mat-form-field>
@@ -45,7 +45,7 @@
 
       <mat-form-field>
           <input  matInput type="date" name="birthDate" [(ngModel)]=itemC.birthDate  placeholder="Fecha Nacimiento">
-      </mat-form-field>      
+      </mat-form-field>
 
       <mat-form-field>
           <input  matInput type="number" name="age" [(ngModel)]=itemC.age  placeholder="Edad">
@@ -62,7 +62,7 @@
         <mat-form-field>
             <mat-select placeholder="Sexo">
               <mat-option value="m">Masculino</mat-option>
-              <mat-option value="f">Femenimo</mat-option>              
+              <mat-option value="f">Femenimo</mat-option>
             </mat-select>
         </mat-form-field>
 
@@ -70,7 +70,7 @@
         <mat-form-field>
                 <mat-select placeholder="Departamento" [(value)]="itemC.codeDepartament">
                   <mat-option value="--falta ">Bolivar</mat-option>
-                  <mat-option value="--falta">Atlantico</mat-option>              
+                  <mat-option value="--falta">Atlantico</mat-option>
                 </mat-select>
             </mat-form-field>
 
@@ -78,10 +78,10 @@
             <mat-form-field>
                     <mat-select placeholder="Municipio" [(value)]="itemC.codeTown">
                       <mat-option value="001">Cartagena</mat-option>
-                      <mat-option value="002">Turbaco</mat-option>              
+                      <mat-option value="002">Turbaco</mat-option>
                     </mat-select>
                 </mat-form-field>
-     
+
 
 
 
@@ -89,30 +89,30 @@
         <mat-form-field>
             <mat-select placeholder="Zona Residencial" [(value)]="itemC.residentialArea">
               <mat-option value="U">U(Urbano)</mat-option>
-              <mat-option value="R">R(Rural)</mat-option>              
+              <mat-option value="R">R(Rural)</mat-option>
             </mat-select>
         </mat-form-field>
 
 
 
     </div>
-    
+
   <form action="">
-  
+
   <br>
-  
+
   <button (click)=addItem() >Registar Usuario </button>
   </form>
   <h3>--------------------------</h3>
-    <ul>      
+    <ul>
   <li *ngFor="let item of items">
 
-        
-    <input readonly type="string" name="id" [(ngModel)]=item.idUser  >
-    <input readonly type="string" name="name" [(ngModel)]=item.identityNumber  >
+
+    <input readonly type="string" name="id" [(ngModel)]=item.first_name  >
+    <input readonly type="string" name="name" [(ngModel)]=item.id_number  >
     <!-- <button (click)=removeItem(item) >Delete </button> -->
     </li>
   </ul>
-
+  <button (click) ="eventoLocoUno()">  botonAPI </button>
 </div>
 

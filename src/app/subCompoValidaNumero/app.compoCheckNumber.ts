@@ -1,5 +1,5 @@
 import { Component,EventEmitter,Input,Output } from '@angular/core';
-  
+
 @Component({
   selector: 'app-validandoNumero',
   templateUrl: './app.compoCheckNumber.html',
@@ -7,21 +7,20 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
 
 })
 export class AppcompoCheckNumber {
-  
-  
+
   @Input()  maximo: number ;
   @Input()  minimo: number;
   @Input()  value: number ;
-  
+
   @Output() valueOut = new EventEmitter<string>();
-  notError = false
-  
+  notError = false;
+
   onBlur(){
-    //this.notError = !(  this.value >= this.minimo && this.value <= this.maximo);
+    // this.notError = !(  this.value >= this.minimo && this.value <= this.maximo);
     this.notError = this.value >=this.minimo && this.value <= this.maximo;
 
     if(this.notError){
-    this.valueOut.emit( this.value.toString());    
+    this.valueOut.emit( this.value.toString());
     }
     //else{
 
@@ -31,11 +30,11 @@ export class AppcompoCheckNumber {
 
 
   }
-  
 
-  isDone = true;  
+
+  isDone = true;
   integer = 123;
-  compo:string ='componente numero 2';     
+  compo:string ='componente numero 2';
 
   eventoLocoUno(title:string){
     this.compo=title;

@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Http, Response, Headers } from '@angular/http';
-import 'rxjs/add/operator/map'
+import { Observable } from 'rxjs/Observable';
+import { Usuario } from './subCompoUsuario/Usuario.model';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type' : 'application/json'
+  })
+};
 
 @Component({
   selector: 'app-root',
@@ -11,44 +17,45 @@ import 'rxjs/add/operator/map'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
 
-  
-  constructor(private _http: Http) {
-    
+
+   private readonly uri = 'https://verimaxi.azurewebsites.net/';
+ //  private readonly uri = 'http://localhost:52885/';
+  private readonly api= 'api/Usuario?id=';
+
+
+  // dependency injection
+  constructor(private _http: HttpClient   ) {
   }
-  
-  
+
   title = 'app VeriMaxi Version =>0.1!!';
-  aempezar ='a empezar en este mundo loco'
-  value ="";
-  isDone = true;  
+  aempezar = 'a empezar en este mundo loco';
+  value = '';
+  isDone = true ;
   integer = 123;
-  hola:string ='hola';
-  datoString = ' :) '+this.hola +' esto es un string suck! ';
-  datoStringUno:string = 'jeje hola}';
+  hola:string = 'hola';
+  datoString = ' :) ' + this.hola + ' esto es un string suck! ';
+  datoStringUno: string = 'jeje hola}';
 
 
 
-  saludarCordialmente() : string{
+  saludarCordialmente(): string {
+    return 'Hola mundo cruel xd';
+  }
 
+  // tslint:disable-next-line:member-ordering
+  datxa: Usuario = null;
 
-    return 'Hola mundo cruel xd'
+   eventoLocoUno(): string  {
+
+    this.getUsers().subscribe(data => {console.log(data); this.datxa = data; });
+    return this.datxa.first_name ;
   }
 
 
-  data: any = null;
-
-   eventoLocoUno() {
-    this.aempezar=String( this._http.get('https://apifestigaita.herokuapp.com/api/v1/bagpipes/14')
-                .map((res: Response) => res.json())
-                 .subscribe(data => {
-                        this.data = data;
-                        console.log(this.data);
-                        
-                }));
+  getUsers(): Observable<any> {
+    return this._http.get<Usuario>(this.uri + this.api + '1102231921',
+                                       httpOptions );
   }
-
-  
 
 }
