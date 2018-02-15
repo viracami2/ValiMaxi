@@ -29,7 +29,7 @@ import { AppCompoBasic } from './compoBasic/app.compoBasic';
 import { AppcompoCheckNumber } from './subCompoValidaNumero/app.compoCheckNumber';
 import { AppsubCompoCrud } from './subCompoCrud/app.subCompoCrud';
 import { UsuarioListarComponent } from './subCompoUsuario/Usuario-list.component';
-import { UsuarioComponent } from './subCompoUsuario/Usuario.Component';
+// import { UsuarioComponent } from './subCompoUsuario/Usuario.component';
 
 
 // obsoleta
@@ -37,6 +37,7 @@ import { UsuarioComponent } from './subCompoUsuario/Usuario.Component';
 
 import { HttpClientModule } from '@angular/common/http'; // para hacer llamados a una api
 import { AppCallApis } from './CallApis/app.CallApis';
+import { UsuarioComponent } from './subCompoUsuario/Usuario.component';
 
 
 const appRoutes: Routes = [
