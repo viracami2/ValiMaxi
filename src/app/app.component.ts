@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
+//import { Observable } from 'rxjs/Observable';
+import { Observable} from 'rxjs'; 
+
 import { Usuario } from './subCompoUsuario/Usuario.model';
 
 const httpOptions = {
