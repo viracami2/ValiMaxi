@@ -1,10 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center ; color:rgb(136, 158, 39);">
-  <h2>-----------------Registrar Usuario(Paciente)-----------</h2>
+  <h2>Agenda tu Cita</h2>
 
 
 
   <div class="example-container">
+      <mat-form-field>
+          <mat-select placeholder="Elige Prodecimiento" [(ngModel)]="selectedValue" name="food"    [(value)]="selectedProcedimiento" (blur)="onBlur()" >
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <h4></h4>
+
+                <mat-form-field>
+                    <mat-select placeholder="Tipo Prodecimiento" [(ngModel)]="selectedValue" name="procedimiento">
+                        <mat-option *ngFor="let procedimiento of procedimientos" [value]="procedimiento.value">
+                            {{procedimiento.viewValue}}
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+                  <h4></h4>
+        
+
+
       <mat-form-field>
         <input matInput type="string" name="id" [(ngModel)]=itemC.idUser  placeholder="Id">
       </mat-form-field>
@@ -19,37 +39,11 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field>
-          <input  matInput type="number" name="epsCode" [(ngModel)]=itemC.epsCode  placeholder="Codigo De EPS">
-      </mat-form-field>
-
-      <mat-form-field>
-          <input  matInput type="string" name="userType" [(ngModel)]=itemC.userType  placeholder="Tipo de Usuario">
-      </mat-form-field>
-
-      <mat-form-field>
-          <input  matInput type="string" name="first_name" [(ngModel)]=itemC.first_name  placeholder="Primer Nombre">
-      </mat-form-field>
-
-      <mat-form-field>
-          <input  matInput type="string" name="secondName" [(ngModel)]=itemC.secondName  placeholder="Segundo Nombre">
-      </mat-form-field>
-
-      <mat-form-field>
-          <input  matInput type="string" name="lastNameFirst" [(ngModel)]=itemC.lastNameFirst  placeholder="Primer Apellido">
-      </mat-form-field>
-
-      <mat-form-field>
-          <input  matInput type="string" name="lastNameSecond" [(ngModel)]=itemC.lastNameSecond  placeholder="Secondo Apellido">
-      </mat-form-field>
 
       <mat-form-field>
           <input  matInput type="date" name="birthDate" [(ngModel)]=itemC.birthDate  placeholder="Fecha Nacimiento">
       </mat-form-field>
 
-      <mat-form-field>
-          <input  matInput type="number" name="age" [(ngModel)]=itemC.age  placeholder="Edad">
-      </mat-form-field>
 
       <mat-form-field>
           <mat-select placeholder="Unidad de Edad">
@@ -68,7 +62,7 @@
 
 
         <mat-form-field>
-                <mat-select placeholder="Departamento" [(value)]="itemC.codeDepartament">
+                <mat-select width = "80" placeholder="Departamento" [(value)]="itemC.codeDepartament">
                   <mat-option value="--falta ">Bolivar</mat-option>
                   <mat-option value="--falta">Atlantico</mat-option>
                 </mat-select>

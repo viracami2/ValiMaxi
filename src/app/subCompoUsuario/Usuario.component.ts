@@ -4,6 +4,12 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Usuario } from './Usuario.model';
 import { AppCallApis } from '../CallApis/app.CallApis';
 
+export interface Food {
+  value: string;
+  viewValue: string;
+}
+
+
 @Component({
    selector: 'app-compoUsuario',
   templateUrl: './app.subCompoUsuario.html',
@@ -11,8 +17,21 @@ import { AppCallApis } from '../CallApis/app.CallApis';
 
 })
 
+
+
+
 export class UsuarioComponent  {
 
+  selectedProcedimiento = '';
+
+  foods: Food[] = [
+    {viewValue: 'Cita Medica', value: 'cita'},
+    {viewValue: 'Examen Clinico', value: 'examen'},
+  ];
+
+  procedimientos: Food[] = [
+   
+   ];
 
 
   constructor(private _callApi: AppCallApis ) {
@@ -23,6 +42,24 @@ export class UsuarioComponent  {
   items: Array<Usuario> = new Array<Usuario>();
   itemC: Usuario = new Usuario(undefined, undefined, undefined, undefined, undefined, undefined
     , undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
+
+
+    
+  onBlur(){
+    this.procedimientos.splice(0,this.procedimientos.length);
+ //   console.log('=========llego==');
+    var data = this.selectedProcedimiento;
+
+    if(data =='cita'){
+    this.procedimientos.push({viewValue: 'General',      value: 'general'});
+    this.procedimientos.push({viewValue: 'Especialista', value: 'especialista'});
+    }
+    else{
+      this.procedimientos.push({viewValue: 'Orina ',      value: 'orina'});
+      this.procedimientos.push({viewValue: 'Sangre', value: 'sangre'});
+        }
+
+  }
 
 
 addItem() {
