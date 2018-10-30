@@ -23,7 +23,7 @@ export interface Food {
 export class UsuarioComponent  {
 
   selectedProcedimiento = '';
-
+  selectedValue ='';
   foods: Food[] = [
     {viewValue: 'Cita Medica', value: 'cita'},
     {viewValue: 'Examen Clinico', value: 'examen'},
@@ -58,7 +58,7 @@ export class UsuarioComponent  {
       this.procedimientos.push({viewValue: 'Orina ',      value: 'orina'});
       this.procedimientos.push({viewValue: 'Sangre', value: 'sangre'});
         }
-
+this.selectedValue =data;
   }
 
 
