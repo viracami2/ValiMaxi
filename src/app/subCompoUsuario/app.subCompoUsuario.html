@@ -15,7 +15,7 @@
         <h4></h4>
 
                 <mat-form-field>
-                    <mat-select placeholder="Tipo Prodecimiento" [(ngModel)]="selectedValue" name="procedimiento">
+                    <mat-select placeholder="Tipo Prodecimiento" name="procedimiento">
                         <mat-option *ngFor="let procedimiento of procedimientos" [value]="procedimiento.value">
                             {{procedimiento.viewValue}}
                           </mat-option>
@@ -62,7 +62,7 @@
 
 
         <mat-form-field>
-                <mat-select width = "80" placeholder="Departamento" [(value)]="itemC.codeDepartament">
+                <mat-select placeholder="Departamento" [(value)]="itemC.codeDepartament">
                   <mat-option value="--falta ">Bolivar</mat-option>
                   <mat-option value="--falta">Atlantico</mat-option>
                 </mat-select>
