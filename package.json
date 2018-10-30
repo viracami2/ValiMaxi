@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
     "postinstall": "ng build --aot --prod",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
     "start": "node server.js"
   },
   "private": true,
