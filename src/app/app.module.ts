@@ -20,7 +20,7 @@ import {
 } from '@angular/material';
 
 
-import {MatSelectModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
 
 
 

@@ -63,7 +63,7 @@ this.selectedValue =data;
 
 
 addItem() {
-this.items.push(this.itemC);
+//this.items.push(this.itemC);
 // this.itemC= new Usuario(;
 }
 
