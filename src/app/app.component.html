@@ -1,6 +1,7 @@
 <mat-menu #rootMenu="matMenu" yPosition="above" xPosition="before">
   <button mat-menu-item  routerLink="/">Home</button>
   <button mat-menu-item [matMenuTriggerFor]="subMenuUsuario">Citas</button>
+  <button mat-menu-item [matMenuTriggerFor]="subMenuMedico">Medicos</button>
   <button mat-menu-item  routerLink="/chekearNumero">Verificar Numero</button>
   </mat-menu>
 
@@ -12,6 +13,12 @@
       <mat-icon>web</mat-icon>Listar Usuarios</button>
     <button mat-menu-item>Registrar</button>
   </mat-menu>
+
+  
+  <mat-menu #subMenuMedico="matMenu">
+    <button mat-menu-item routerLink="/crearMedico" >
+      <mat-icon>web</mat-icon>Crear</button>           
+    </mat-menu>
 
   <button mat-icon-button [matMenuTriggerFor]="rootMenu">
     <mat-icon>more_vert</mat-icon>
@@ -55,9 +62,6 @@
               matAutosizeMaxRows="5"></textarea>
   </mat-form-field>
    -->
-
-
-
 
 
 

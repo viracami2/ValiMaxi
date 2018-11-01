@@ -38,20 +38,24 @@ import { UsuarioListarComponent } from './subCompoUsuario/Usuario-list.component
 import { HttpClientModule } from '@angular/common/http'; // para hacer llamados a una api
 import { AppCallApis } from './CallApis/app.CallApis';
 import { UsuarioComponent } from './subCompoUsuario/Usuario.component';
+//  /Medico.component;
+import { MedicoComponent  } from './subCompoMedico/Medico.component';
+
 
 
 const appRoutes: Routes = [
   {path : 'compocheck', component: AppcompoCheckNumber},
   {path : 'crearUsuario', component: UsuarioComponent}  ,
-   {path : 'listarUsuario', component: UsuarioListarComponent}  ,
-  {path : 'chekearNumero', component: AppcompoCheckNumber}
- ];
+  {path : 'listarUsuario', component: UsuarioListarComponent},
+  {path : 'chekearNumero', component: AppcompoCheckNumber},
+  {path : 'crearMedico', component: MedicoComponent} 
+];
 
 
 @NgModule({
   declarations: [
     AppComponent, AppCompoBasic, AppcompoCheckNumber,
-    AppsubCompoCrud, UsuarioComponent, UsuarioListarComponent
+    AppsubCompoCrud, UsuarioComponent, UsuarioListarComponent,MedicoComponent
   ],
   imports: [
     BrowserModule, FormsModule, BrowserAnimationsModule,

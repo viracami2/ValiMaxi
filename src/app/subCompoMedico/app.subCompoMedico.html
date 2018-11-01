@@ -1,0 +1,46 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center ; color:rgb(136, 158, 39);">
+  <h2>Formulario De Creacion De Nuevos Medicos</h2>
+
+
+
+  <div class="example-container">
+ 
+     
+      <mat-form-field class="borderBasic">
+        <input matInput type="string" name="id" [(ngModel)]=itemC.Id  placeholder="Id">
+      </mat-form-field>
+
+      <mat-form-field class="borderBasic">
+          <input matInput type="string" name="nombres" [(ngModel)]=itemC.Name  placeholder="Nombres">
+        </mat-form-field>
+
+        <mat-form-field class="borderBasic">
+            <input matInput type="string" name="Apellidos" [(ngModel)]=itemC.LastName  placeholder="Apellidos">
+          </mat-form-field>
+      <mat-form-field class="borderBasic">
+          <input  matInput type="date" name="birthDate" [(ngModel)]=itemC.BirthDate  placeholder="Fecha Nacimiento">
+      </mat-form-field>
+
+      <mat-form-field class="borderBasic">
+            <mat-select placeholder="Tipo de Medico">
+              <mat-option value="g">General</mat-option>
+              <mat-option value="e">Especialista</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="borderBasic">
+            <mat-select placeholder="Especialidad">
+                <mat-option value="m">Sin Especialidad</mat-option>
+              <mat-option value="m">Ginecologia</mat-option>
+              <mat-option value="f">Reumatologia</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+  <form action="">
+  <br>
+  <button mat-flat-button color="primary"   (click)=addItem()  >Registar Medico</button>
+
+  </form>
+</div>
+
