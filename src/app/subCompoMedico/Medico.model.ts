@@ -1,25 +1,29 @@
 export class Medico {
 
-  Id: string = undefined;
-  Name: string; 
-  LastName: string;
-  BirthDate: string;
+  id: string = undefined;
+  name: string; 
+  lastName: string;
+  birthDate: Date;
+  medictype:string;
+  specialty:string;
 
 
   constructor(
   id: string ,  name: string,lastName: string, 
-  birthDate: string
+  birthDate: Date,medictype:string ,specialty:string
   ) {
-    this.Id = id; 
-    this.Name = name; 
-    this.BirthDate = birthDate;  
-    this.LastName = lastName;
+    this.id = id; 
+    this.name = name; 
+    this.birthDate = birthDate;  
+    this.lastName = lastName;
+    this.medictype=medictype;
+    this.specialty=specialty;
   }
 
 
 
   getInformation() {
-    return '[id: ' + this.Id + ', ' + this.Name + +']';
+    return '[id: ' + this.id + ', ' + this.name + +']';
 
   }
 

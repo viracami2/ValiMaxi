@@ -3,6 +3,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 import { Medico } from './Medico.model';
 import { AppCallApis } from '../CallApis/app.CallApis';
+import { Router } from '@angular/router';
 
 export interface Food {
   value: string;
@@ -17,30 +18,32 @@ export interface Food {
 
 })
 
-
-
-
 export class MedicoComponent  {
 
   selectedProcedimiento = '';
+  results='';
+  error='';
+  responseShort='';
+
+
+
   selectedValue ='';
   foods: Food[] = [
     {viewValue: 'Cita Medica', value: 'cita'},
     {viewValue: 'Examen Clinico', value: 'examen'},
   ];
 
-  procedimientos: Food[] = [
-   
+  procedimientos: Food[] = [   
    ];
 
 
-  constructor(private _callApi: AppCallApis ) {
+  constructor(private _callApi: AppCallApis ,private router: Router) {
   }
 
   value = ' Valioso con un cambio';
 
   items: Array<Medico> = new Array<Medico>();
-  itemC: Medico = new Medico(undefined, undefined, undefined, undefined);
+  itemC: Medico = new Medico(undefined, undefined, undefined, undefined,undefined,undefined);
 
 
     
@@ -60,23 +63,32 @@ export class MedicoComponent  {
 this.selectedValue =data;
   }
 
-
 addItem() {
 //this.items.push(this.itemC);
-// this.itemC= new Usuario(;
+var as=this._callApi.addMedico(this.itemC,'api/Medico')
+.toPromise().then(res=>{this.results=res.data; this.error=res.status; this.responseShort=res.responseShort;})// .subscribe(res => console.log(res));
+// this.itemC= new Usuario(;01
+console.log(this.error + '  _ ' +this.results+this.responseShort);
+
+//this.router.navigate([""]);
+setTimeout(() => 
+{
+    this.router.navigate(['']);
+},
+1500);
+
 }
 
   removeItem(it: Medico) {
     const index = this.items.indexOf(it);
-
     this.items.splice(index, 1);
-
   }
-
 
   eventoLocoUno(): string  {
 
-       this._callApi.getUsers().subscribe(data => {console.log(data['items']); this.items = data['items']; this.items.push(); });
+       this._callApi.getUsers()
+          .subscribe(data => {console.log(data['items']); this.items = data['items']; this.items.push(); });
+
     return this.itemC.getInformation();
   }
 }

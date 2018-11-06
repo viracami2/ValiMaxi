@@ -48,7 +48,9 @@ const appRoutes: Routes = [
   {path : 'crearUsuario', component: UsuarioComponent}  ,
   {path : 'listarUsuario', component: UsuarioListarComponent},
   {path : 'chekearNumero', component: AppcompoCheckNumber},
-  {path : 'crearMedico', component: MedicoComponent} 
+  {path : 'crearMedico', component: MedicoComponent} ,
+  { path: '', redirectTo: "home", pathMatch: "full" }
+
 ];
 
 
