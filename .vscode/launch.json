@@ -5,6 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "edge",
+            "request": "attach",
+            "name": "Attach to Edge",
+            "port": 2015,
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via NPM",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "debug"
+            ],
+            "port": 4200
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",

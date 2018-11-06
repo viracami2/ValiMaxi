@@ -8,29 +8,29 @@
  
      
       <mat-form-field class="borderBasic">
-        <input matInput type="string" name="id" [(ngModel)]=itemC.Id  placeholder="Id">
+        <input matInput type="string" name="id" [(ngModel)]=itemC.id  placeholder="Id">
       </mat-form-field>
 
       <mat-form-field class="borderBasic">
-          <input matInput type="string" name="nombres" [(ngModel)]=itemC.Name  placeholder="Nombres">
+          <input matInput type="string" name="name" [(ngModel)]=itemC.name  placeholder="Nombres">
         </mat-form-field>
 
         <mat-form-field class="borderBasic">
-            <input matInput type="string" name="Apellidos" [(ngModel)]=itemC.LastName  placeholder="Apellidos">
+            <input matInput type="string" name="lastname" [(ngModel)]=itemC.lastname  placeholder="Apellidos">
           </mat-form-field>
       <mat-form-field class="borderBasic">
-          <input  matInput type="date" name="birthDate" [(ngModel)]=itemC.BirthDate  placeholder="Fecha Nacimiento">
+          <input  matInput type="date" name="birthDate" [(ngModel)]=itemC.birthDate  placeholder="Fecha Nacimiento">
       </mat-form-field>
 
       <mat-form-field class="borderBasic">
-            <mat-select placeholder="Tipo de Medico">
+            <mat-select placeholder="Tipo de Medico"  [(value)]="itemC.medictype">
               <mat-option value="g">General</mat-option>
               <mat-option value="e">Especialista</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field class="borderBasic">
-            <mat-select placeholder="Especialidad">
+            <mat-select placeholder="Especialidad" [(value)]="itemC.specialty" >
                 <mat-option value="m">Sin Especialidad</mat-option>
               <mat-option value="m">Ginecologia</mat-option>
               <mat-option value="f">Reumatologia</mat-option>
