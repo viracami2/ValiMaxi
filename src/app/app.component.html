@@ -1,9 +1,33 @@
-<mat-menu #rootMenu="matMenu" yPosition="above" xPosition="before">
-  <button mat-menu-item  routerLink="/">Home</button>
-  <button mat-menu-item [matMenuTriggerFor]="subMenuUsuario">Citas</button>
-  <button mat-menu-item [matMenuTriggerFor]="subMenuMedico">Medicos</button>
-  <button mat-menu-item  routerLink="/chekearNumero">Verificar Numero</button>
-  </mat-menu>
+<div class="navbar navbar-light bg-light" style="height: 60px">
+
+  <ul class="nav nav-pills my-auto">  
+      <a class="navbar-brand" routerlink="/">        
+        Home
+      </a>
+    <li class="nav-item">
+      <a class="nav-link" [matMenuTriggerFor]="subMenuUsuario">
+        <h5>Citas</h5>
+      </a>      
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" [matMenuTriggerFor]="subMenuMedico">
+            <h5>Medicos</h5>
+        </a>      
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/chekearNumero" style="color: gray">
+              <h5>Verificar Numero</h5>
+          </a>      
+      </li>    
+  </ul>
+
+  <form class="form-inline mr-2">
+    <input type="search" placeholder="Search" class="form-control">
+    <button type="button" class="btn btn-outline-primary">Search</button>
+  </form>
+  </div>
 
   <mat-menu #subMenuUsuario="matMenu">
     <button mat-menu-item routerLink="/crearUsuario" >
@@ -20,9 +44,9 @@
       <mat-icon>web</mat-icon>Crear</button>           
     </mat-menu>
 
-  <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+  <!-- <button mat-icon-button [matMenuTriggerFor]="rootMenu">
     <mat-icon>more_vert</mat-icon>
-  </button>
+  </button> -->
 
 
   <div style="text-align:center">
